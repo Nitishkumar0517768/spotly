@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Car, MapPin, ArrowRight } from 'lucide-react';
 
 const SelectionCards = () => {
@@ -37,10 +38,13 @@ const SelectionCards = () => {
           <h2 className="text-3xl font-bold text-[#1E293B] mb-3">{card.type}</h2>
           <p className="text-[#64748B] mb-10 text-lg">{card.description}</p>
           
-          <button className={`w-full ${card.buttonColor} text-white py-4 px-6 rounded-xl font-bold flex items-center justify-center transition-all group`}>
+          <Link 
+            to={card.link}
+            className={`w-full ${card.buttonColor} text-white py-4 px-6 rounded-xl font-bold flex items-center justify-center transition-all group`}
+          >
             {card.buttonText}
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </Link>
 
           {/* Decorative background circle */}
           <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-gray-50 rounded-full -z-0"></div>
