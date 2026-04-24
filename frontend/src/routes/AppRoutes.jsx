@@ -5,6 +5,7 @@ import HowItWorksPage from '../pages/HowItWorksPage';
 import PricingPage from '../pages/PricingPage';
 import SelectionPage from '../pages/SelectionPage';
 import DriverSignupPage from '../pages/DriverSignupPage';
+import OwnerSignupPage from '../pages/OwnerSignupPage';
 
 // Placeholder components
 const Login = () => <div className="p-10 text-center">Login Page</div>;
@@ -21,6 +22,7 @@ const AppRoutes = () => {
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/register" element={<SelectionPage />} />
         <Route path="/register/driver" element={<DriverSignupPage />} />
+        <Route path="/register/owner" element={<OwnerSignupPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/driver" element={<DriverDashboard />} />
         <Route path="/owner" element={<OwnerDashboard />} />
