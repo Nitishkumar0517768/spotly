@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const Navbar = ({ authMode = false }) => {
+const Navbar = ({ authMode = false, rightText, rightLink }) => {
   const location = useLocation();
   const path = location.pathname;
 
@@ -56,12 +56,18 @@ const Navbar = ({ authMode = false }) => {
         {/* Actions */}
         <div className="hidden md:flex items-center space-x-6">
           {authMode ? (
-            <Link
-              to="/login"
-              className="bg-[#0047FF] hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium text-sm transition-colors"
-            >
-              Log In
-            </Link>
+            rightText ? (
+              <Link to={rightLink || "/"} className="text-[#64748B] hover:text-[#1E293B] font-bold text-sm transition-colors">
+                {rightText}
+              </Link>
+            ) : (
+              <Link
+                to="/login"
+                className="bg-[#0047FF] hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium text-sm transition-colors"
+              >
+                Log In
+              </Link>
+            )
           ) : (
             <>
               <Link to="/login" className="text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors">
