@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import OwnerAuthForm from '../components/auth/OwnerAuthForm';
-import { ShieldCheck, Banknote, ShieldHeart } from 'lucide-react';
+import { ShieldCheck, Banknote, Shield } from 'lucide-react';
 
 const OwnerSignupPage = () => {
   return (
@@ -41,7 +41,7 @@ const OwnerSignupPage = () => {
               
               <div>
                 <div className="text-[#0047FF] mb-3">
-                  <ShieldHeart className="w-8 h-8" />
+                  <Shield className="w-8 h-8" />
                 </div>
                 <h3 className="font-bold text-[#1E293B] mb-2">Insured Coverage</h3>
                 <p className="text-[#64748B] text-sm leading-relaxed">
