@@ -3,13 +3,13 @@ import { Eye, EyeOff, Mail, Lock, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SocialAuth from './SocialAuth';
 
-const SignupForm = () => {
+const SignupForm = ({ type = 'driver', hideSocial = false }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   return (
     <div className="space-y-4">
-      <SocialAuth mode="SIGN UP" />
+      {!hideSocial && <SocialAuth mode="SIGN UP" />}
 
       <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
         <div>

@@ -1,16 +1,15 @@
 import React from 'react';
 import Navbar from '../components/layout/Navbar';
-import Footer from '../components/layout/Footer';
-import OwnerAuthForm from '../components/auth/OwnerAuthForm';
+import SignupForm from '../components/auth/SignupForm';
 import { ShieldCheck, Banknote, Shield } from 'lucide-react';
 
 const OwnerSignupPage = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-[#F8FAFC]">
-      <Navbar authMode={true} rightText="Back to Marketplace" rightLink="/" />
+    <div className="h-screen overflow-hidden flex flex-col bg-[#F8FAFC]">
+      <Navbar authMode={true} />
       
-      <main className="flex-grow flex flex-col pt-12 md:pt-20 px-6">
-        <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-24">
+      <main className="flex-grow flex flex-col pt-8 px-6 overflow-y-auto">
+        <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-8 mt-4">
           
           {/* Left Side Content */}
           <div className="flex flex-col justify-center">
@@ -23,7 +22,7 @@ const OwnerSignupPage = () => {
               Start earning with Spotly
             </h1>
             
-            <p className="text-lg text-[#64748B] mb-12 max-w-lg leading-relaxed">
+            <p className="text-lg text-[#64748B] mb-8 max-w-lg leading-relaxed">
               Join thousands of property owners maximizing their space. 
               Turn your unused parking spots into a steady stream of passive income.
             </p>
@@ -53,34 +52,34 @@ const OwnerSignupPage = () => {
 
           {/* Right Side Card */}
           <div className="flex justify-center items-center">
-            <OwnerAuthForm />
+            <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100">
+              <SignupForm type="owner" hideSocial={true} />
+            </div>
           </div>
         </div>
 
         {/* Bottom Stats */}
-        <div className="max-w-6xl mx-auto w-full border-t border-gray-200 pt-16 pb-20">
+        <div className="max-w-6xl mx-auto w-full border-t border-gray-200 pt-8 pb-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-[#1E293B] mb-2">15k+</div>
+              <div className="text-3xl font-bold text-[#1E293B] mb-1">15k+</div>
               <div className="text-xs font-bold text-gray-400 uppercase tracking-widest">Active Owners</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-[#1E293B] mb-2">$2.4M</div>
+              <div className="text-3xl font-bold text-[#1E293B] mb-1">$2.4M</div>
               <div className="text-xs font-bold text-gray-400 uppercase tracking-widest">Paid to Partners</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-[#1E293B] mb-2">450+</div>
+              <div className="text-3xl font-bold text-[#1E293B] mb-1">450+</div>
               <div className="text-xs font-bold text-gray-400 uppercase tracking-widest">Cities Covered</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-[#1E293B] mb-2">99.9%</div>
+              <div className="text-3xl font-bold text-[#1E293B] mb-1">99.9%</div>
               <div className="text-xs font-bold text-gray-400 uppercase tracking-widest">Uptime Safety</div>
             </div>
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };
