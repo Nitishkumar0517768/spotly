@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Plus, Search, Filter, MoreHorizontal, 
   MapPin, Car, Info, ChevronLeft, 
@@ -80,10 +81,10 @@ const MyParking = () => {
                 <h1 className="text-3xl font-extrabold text-[#1E293B] mb-2">My Parking Spaces</h1>
                 <p className="text-sm font-medium text-gray-400">Manage and monitor all your listed parking locations from one place.</p>
               </div>
-              <button className="flex items-center gap-2 px-6 py-3 bg-[#0047FF] text-white rounded-xl text-sm font-bold shadow-lg shadow-blue-500/20 hover:bg-blue-700 transition-all active:scale-[0.98]">
+              <Link to="/owner/add-parking" className="flex items-center gap-2 px-6 py-3 bg-[#0047FF] text-white rounded-xl text-sm font-bold shadow-lg shadow-blue-500/20 hover:bg-blue-700 transition-all active:scale-[0.98]">
                 <Plus className="w-5 h-5" />
                 Add New Space
-              </button>
+              </Link>
             </div>
 
             {/* Stats Overview */}
