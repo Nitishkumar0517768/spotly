@@ -1,11 +1,11 @@
 import React from 'react';
-import { Banknote, SlidersHorizontal, ShieldCheck } from 'lucide-react';
+import { IndianRupee, SlidersHorizontal, ShieldCheck } from 'lucide-react';
 
 const HostBenefitsSection = () => {
   const benefits = [
     {
       id: 1,
-      icon: <Banknote className="w-5 h-5 text-[#0047FF]" />,
+      icon: <IndianRupee className="w-5 h-5 text-[#0047FF]" />,
       title: 'Secure Payments',
       description: 'Automatic weekly payouts directly to your bank account. No chasing invoices or cash handling.'
     },

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  MapPin, LayoutGrid, DollarSign, ShieldCheck, 
+  MapPin, LayoutGrid, IndianRupee, ShieldCheck, 
   Lightbulb, Star, ChevronRight
 } from 'lucide-react';
 import OwnerSidebar from '../../components/owner/OwnerSidebar';
@@ -136,10 +136,10 @@ const AddParking = () => {
                     {/* Price */}
                     <div className="w-full md:w-1/2 md:pr-3">
                       <label className="block text-xs font-black text-[#1E293B] mb-2 uppercase tracking-wide">
-                        Price Per Hour (USD)
+                        Price Per Hour (INR)
                       </label>
                       <div className="relative">
-                        <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                        <IndianRupee className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                         <input 
                           type="number" 
                           step="0.01"
@@ -223,7 +223,7 @@ const AddParking = () => {
                         <span>0.0 <span className="font-medium">(New)</span></span>
                       </div>
                       <div className="text-lg font-black text-[#0047FF]">
-                        $ -- <span className="text-xs font-bold text-gray-400">/hr</span>
+                        ₹ -- <span className="text-xs font-bold text-gray-400">/hr</span>
                       </div>
                     </div>
                     

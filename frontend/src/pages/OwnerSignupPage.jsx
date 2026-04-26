@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/layout/Navbar';
 import SignupForm from '../components/auth/SignupForm';
-import { ShieldCheck, Banknote, Shield } from 'lucide-react';
+import { ShieldCheck, IndianRupee, Shield } from 'lucide-react';
 
 const OwnerSignupPage = () => {
   return (
@@ -30,7 +30,7 @@ const OwnerSignupPage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <div className="text-[#0047FF] mb-2">
-                  <Banknote className="w-6 h-6" />
+                  <IndianRupee className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-[#1E293B] text-sm mb-1">Weekly Payouts</h3>
                 <p className="text-[#64748B] text-xs leading-relaxed">
